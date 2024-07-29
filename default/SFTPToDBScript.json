@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1722252414726,
+    "description" : "",
+    "identifier" : "SFTPToDBScript",
+    "lastModifiedTimestamp" : 1722252414726,
+    "name" : "SFTP_To_DB_Script",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
