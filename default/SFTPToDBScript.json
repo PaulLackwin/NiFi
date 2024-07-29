@@ -1101,7 +1101,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -64.0,
-        "y" : -104.0
+        "y" : -64.0
       },
       "properties" : {
         "Split Depth" : "1"
