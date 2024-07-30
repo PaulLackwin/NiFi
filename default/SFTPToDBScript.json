@@ -1100,7 +1100,7 @@
       "name" : "SplitXml",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -64.0,
+        "x" : -72.0,
         "y" : -64.0
       },
       "properties" : {
