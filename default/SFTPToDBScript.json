@@ -479,14 +479,14 @@
           "group" : "org.apache.nifi",
           "version" : "2.0.0-M4"
         },
-        "type" : "org.apache.nifi.distributed.cache.client.DistributedMapCacheClient"
+        "type" : "org.apache.nifi.distributed.cache.client.AtomicDistributedMapCacheClient"
       }, {
         "bundle" : {
           "artifact" : "nifi-standard-services-api-nar",
           "group" : "org.apache.nifi",
           "version" : "2.0.0-M4"
         },
-        "type" : "org.apache.nifi.distributed.cache.client.AtomicDistributedMapCacheClient"
+        "type" : "org.apache.nifi.distributed.cache.client.DistributedMapCacheClient"
       } ],
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "5fd7dadd-7d0e-38b9-a102-22bb03f9629c",
@@ -675,7 +675,7 @@
           "name" : "database-driver-locations",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "URL", "FILE", "DIRECTORY" ]
+            "resourceTypes" : [ "DIRECTORY", "FILE", "URL" ]
           },
           "sensitive" : false
         },
@@ -994,7 +994,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : 784.0,
-        "y" : -104.0
+        "y" : -80.0
       },
       "properties" : {
         "IsCreationTimeUnique" : "#{IsCreationTimeUnique}",
@@ -1121,7 +1121,9 @@
       "scheduledState" : "ENABLED",
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
+      "style" : {
+        "background-color" : "#333353"
+      },
       "type" : "org.apache.nifi.processors.standard.SplitXml",
       "yieldDuration" : "1 sec"
     }, {
@@ -1144,7 +1146,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : 1208.0,
-        "y" : -112.0
+        "y" : -88.0
       },
       "properties" : {
         "Script Engine" : "Groovy",
@@ -1183,7 +1185,7 @@
           "name" : "Module Directory",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "DIRECTORY" ]
+            "resourceTypes" : [ "DIRECTORY", "FILE" ]
           },
           "sensitive" : false
         }
@@ -1194,7 +1196,9 @@
       "scheduledState" : "ENABLED",
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
+      "style" : {
+        "background-color" : "#333353"
+      },
       "type" : "org.apache.nifi.processors.script.ExecuteScript",
       "yieldDuration" : "1 sec"
     }, {
@@ -1667,7 +1671,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : 368.0,
-        "y" : -104.0
+        "y" : -80.0
       },
       "properties" : {
         "SegmentNozzle" : "//Board/@Segment-Nozzle",
@@ -1743,7 +1747,9 @@
       "scheduledState" : "ENABLED",
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
+      "style" : {
+        "background-color" : "#333353"
+      },
       "type" : "org.apache.nifi.processors.standard.EvaluateXPath",
       "yieldDuration" : "1 sec"
     } ],
@@ -1763,19 +1769,19 @@
         "name" : "IsSegmentNozzleUnique",
         "provided" : false,
         "sensitive" : false,
-        "value" : "true"
-      }, {
-        "description" : "",
-        "name" : "IsCreationTimeUnique",
-        "provided" : false,
-        "sensitive" : false,
-        "value" : "true"
+        "value" : "false"
       }, {
         "description" : "",
         "name" : "SFTP Remote Path",
         "provided" : false,
         "sensitive" : false,
         "value" : "\\nifi"
+      }, {
+        "description" : "",
+        "name" : "IsCreationTimeUnique",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "false"
       }, {
         "description" : "",
         "name" : "XSLT File Path",
@@ -1787,7 +1793,7 @@
         "name" : "IsMachineIdUnique",
         "provided" : false,
         "sensitive" : false,
-        "value" : "true"
+        "value" : "false"
       }, {
         "description" : "",
         "name" : "IsMeasuredAfterUnique",
