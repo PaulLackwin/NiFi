@@ -675,7 +675,7 @@
           "name" : "database-driver-locations",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "DIRECTORY", "FILE", "URL" ]
+            "resourceTypes" : [ "URL", "FILE", "DIRECTORY" ]
           },
           "sensitive" : false
         },
@@ -1100,8 +1100,8 @@
       "name" : "SplitXml",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -72.0,
-        "y" : -64.0
+        "x" : -24.0,
+        "y" : -72.0
       },
       "properties" : {
         "Split Depth" : "1"
@@ -1185,7 +1185,7 @@
           "name" : "Module Directory",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "DIRECTORY", "FILE" ]
+            "resourceTypes" : [ "FILE", "DIRECTORY" ]
           },
           "sensitive" : false
         }
@@ -1769,19 +1769,19 @@
         "name" : "IsSegmentNozzleUnique",
         "provided" : false,
         "sensitive" : false,
-        "value" : "false"
+        "value" : "true"
+      }, {
+        "description" : "",
+        "name" : "IsCreationTimeUnique",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "true"
       }, {
         "description" : "",
         "name" : "SFTP Remote Path",
         "provided" : false,
         "sensitive" : false,
         "value" : "\\nifi"
-      }, {
-        "description" : "",
-        "name" : "IsCreationTimeUnique",
-        "provided" : false,
-        "sensitive" : false,
-        "value" : "false"
       }, {
         "description" : "",
         "name" : "XSLT File Path",
@@ -1793,7 +1793,7 @@
         "name" : "IsMachineIdUnique",
         "provided" : false,
         "sensitive" : false,
-        "value" : "false"
+        "value" : "true"
       }, {
         "description" : "",
         "name" : "IsMeasuredAfterUnique",
